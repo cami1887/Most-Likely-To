@@ -1,0 +1,375 @@
+
+html { 
+    background: url(images/pexels-leeloo-thefirst-8177922.jpg); 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    overflow: hidden;
+  }
+
+  @font-face {
+    font-family: myFirstFont;
+    src: url(fonts/Caver\ Pitalsal.ttf);
+  }
+.header {
+    padding: 1px;
+    background-color: #ffe8e8;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.pinkBackground { /*is not stationary on zoom. not sure how to fix it*/
+  height: 300px;
+  width: 100%;
+  position: fixed;
+  z-index: -1; 
+  top: 70%;
+  bottom: 0;
+  left: 0;
+  background-color: #ffe7e7bd;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+  animation-duration: 1800ms;
+  animation-name: pinkSlideIn;
+}
+
+@keyframes pinkSlideIn {
+  from {
+    margin-left: 100%;
+    width: 300%;
+    border-bottom-left-radius: 200px;
+    border-top-left-radius: 200px;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+h1 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-family: myFirstFont;
+    letter-spacing: 1px;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+a:visited {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+h2 {
+    font-family: myFirstFont;
+    font-size: 130px;
+    letter-spacing: 5px;
+    color: rgb(255, 253, 253);
+    text-align: center;
+    margin-top: 10%;
+    text-shadow: 4px 2px #000000;
+    animation-duration: 2s;
+    animation-name: h2Appear;
+}
+
+@keyframes h2Appear {
+    from {
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+    }
+  }
+
+.instructionOne {
+    font-size: 32px;
+    color: rgb(46, 46, 46);
+    text-align: center;
+    font-family: myFirstFont;
+    text-shadow: 2px 2px #ffffff;
+    letter-spacing: 2px;
+    animation-duration: 2500ms;
+    animation-name: instructionSlideIn;
+}
+
+@keyframes instructionSlideIn {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+.button { /* not sure how to recenter the button/move the center line*/
+  border: none;
+  background-color: #ffd4d4;
+  outline: none;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-family: myFirstFont;
+  margin-left: 45%;
+  margin-top: 11em;
+  transition-duration: 0.4s;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+  animation-duration: 500ms;
+  animation-name: buttonAppear;
+  animation-timing-function: ease-in;
+}
+
+
+
+@keyframes buttonAppear {
+    from {
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+    }
+  }
+
+.button:hover { /*because of the center, it expands to the right instead of from the center*/
+    background-color: lightpink;
+    padding: 17px 37px;
+}
+
+.whiteBar {
+  z-index: -1;
+  background-color: #ffffff6b;
+  margin-top: 25%;
+  margin-left: -10px;
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  animation-duration: 1500ms;
+  animation-name: whiteBarSlide;
+}
+
+@keyframes whiteBarSlide{
+
+    from {
+        margin-top: 50%;
+    }
+    to {
+        margin-top: 25%;
+    }
+}
+
+.whiteBackground {
+  height: 60%;
+  width: 50%;
+  position: absolute;
+  margin-top: 9%;
+  margin-left: 25%;
+  z-index: -1; 
+  background-color: #ffffff;
+  border-radius: 3%;
+  border-style: double;
+  border-color: rgb(224, 165, 0);
+  }
+
+h2.titleTwo {
+    font-family: myFirstFont;
+    font-size: 80px;
+    letter-spacing: 5px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 2%;
+    text-shadow: 4px 2px #000000;
+    animation-duration: 2s;
+    animation-name: h2Appear;
+}
+
+.instructionTwo {
+    font-size: 32px;
+    color: rgb(46, 46, 46);
+    text-align: center;
+    font-family: myFirstFont;
+    text-shadow: 2px 2px #ffffff;
+    letter-spacing: 2px;
+    animation-duration: 2500ms;
+    animation-name: instructionSlideIn;
+}
+
+.reset { /* not sure how to recenter the button/move the center line*/
+    border: none;
+    background-color: #ffd4d4;
+    outline: none;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-family: myFirstFont;
+    margin-left: 47%;
+    margin-top: 9em;
+    transition-duration: 0.4s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+    animation-duration: 500ms;
+    animation-name: buttonAppear;
+    animation-timing-function: ease-in;
+  }
+
+  .reset:hover {
+    background-color: #ffafaf;
+  }
+
+  #output {
+    font-family: myFirstFont;
+    font-size: 80px;
+    letter-spacing: 5px;
+    color: rgb(0, 0, 0);
+    padding: 0%;
+    text-align: center;
+    margin-top: 9.5%;
+  }
+
+  .sidebarArrow {
+    float:left;
+    margin-top: 24.5%;
+    height: 25px;
+    width: 25px;
+  }
+
+  .sideNav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ffd4d4;
+    overflow-x: hidden;
+    padding-top: 60px; 
+    transition: 0.5s;
+  }
+
+  .sideNav .sidebarTitle {
+    font-family: myFirstFont;
+    text-align: left;
+    font-size: 45px;
+    margin-top: 2%;
+    margin-left: 5%;
+  }
+  
+  .sideNav .templateOne {
+    font-size: medium;
+    font-family: myFirstFont;
+    letter-spacing: 1.5px;
+    margin-left: 17%;
+    margin-bottom: 10%;
+    height: 150px;
+    width: 225px;
+    background-color: #ffffff;
+    border-radius: 5%;
+    border-style: double;
+    border-color: rgb(224, 165, 0);
+    display: block;
+    transition: 0.3s; 
+
+  }
+
+  .templateOne:hover {
+    color: rgba(0, 0, 0, 0.219)
+  }
+
+  .sideNav .templateTwo {
+    font-size: medium;
+    font-family: myFirstFont;
+    letter-spacing: 1.5px;
+    margin-left: 17%;
+    margin-bottom: 10%;
+    height: 150px;
+    width: 225px;
+    background-color: #9b9b9b60;
+    border-radius: 5%;
+    border-style:groove;
+    border-color: rgb(255, 255, 255);
+    transition: 0.3s;
+  }
+
+  .templateTwo:hover {
+    color: rgba(0, 0, 0, 0.219)
+  }
+
+  .sideNav .templateThree {
+    font-size: medium;
+    font-family: myFirstFont;
+    letter-spacing: 1.5px;
+    margin-left: 17%;
+    margin-bottom: 10%;
+    height: 150px;
+    width: 225px;
+    background-color: #eecd90a1;
+    border-radius: 5%;
+    border-style: dashed;
+    border-color: rgb(255, 255, 255);
+    display: block;
+    transition: 0.3s;
+  }
+
+  .templateThree:hover {
+    color: rgba(0, 0, 0, 0.219)
+  }
+
+  .sideNav .templateFour {
+    font-size: medium;
+    font-family: myFirstFont;
+    letter-spacing: 1.5px;
+    margin-left: 17%;
+    margin-bottom: 10%;
+    height: 150px;
+    width: 225px;
+    background-color: #ffe8e8;
+    border-radius: 5%;
+    border-style: dotted;
+    border-color: rgb(255, 255, 255);
+    display: block;
+    transition: 0.3s;
+  }
+
+  .templateFour:hover {
+    color: rgba(0, 0, 0, 0.219)
+  }
+
+  .sideNav a:hover {
+    color: #f1f1f1;
+  }
+
+  .sideNav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sideNav {padding-top: 15px;}
+    .sideNav a {font-size: 18px;}
+  }
