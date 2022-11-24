@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Certificate</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body onload="getWords()">
+   <section class = "generator">
+      <div class="header">
+          <h1><a href="index.html">Certificate Generator</a></h1>
+      </div>
+      <div id="mySidenav" class="side-nav">
+          <a href="javascript:void(0)" class="close-button" onclick="closeNav()">&times;</a>
+          <p class="sidebar-title">Pick A Certificate Background:</p>
+          <button class="template-one" onclick="certificateOne()">Light Theme</button>
+          <button class="template-two" onclick="certificateTwo()">Dark Theme</button>
+          <button class="template-three" onclick="certificateThree()">Gold Theme</button>
+          <button class="template-four" onclick="certificateFour()">Pink Theme</button>
+      </div>
 
-  <body onload="getWords()">
-    <section class="header">
-      <h1><a href="index.html">Certificate Generator</a></h1>
-    </section>
+      <div>
+          <span onclick="openNav()">
+              <img class="sidebar-arrow" src="images/vippng.com-north-arrow-png-15215.png" alt="Open">
+          </span>
 
-<div id="mySidenav" class="sideNav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <p class="sidebarTitle">Pick A Certificate Background:</p>
-    <button class="templateOne" onclick="certificateOne()">Light Theme</button>
-    <button class="templateTwo" onclick="certificateTwo()">Dark Theme</button>
-    <button class="templateThree" onclick="certificateThree()">Gold Theme</button>
-    <button class="templateFour" onclick="certificateFour()">Pink Theme</button>
-  </div>
-
-  <span onclick="openNav()"><img class="sidebarArrow" src="images/vippng.com-north-arrow-png-15215.png" alt="Open"></span>
-    <div class="whiteBar"></div>
-    <div class="whiteBackground"></div>
-    <h2 class="titleTwo">You're Most Likely To</h2>
-    <p class="instructionTwo">Don't like what you see? Try again!</p>
-    <div id="output"></div>
-    <form action="generator.html">
-      <button type="reset" class="reset" onclick="getWords()">Reroll</button>
-    </form>
-
-    <script src="main.js"></script>
-  </body>
+          <div class="white-bar"></div>
+          <div class="cert-background light-theme dark-theme gold-theme pink-theme"></div>
+          <h2 class="title-two">You're Most Likely To</h2>
+          <p class="instruction-two">Don't like what you see? Try again!</p>
+          <div id="output"></div>
+          <form action="generator.html">
+              <button type="reset" class="reset" onclick="getWords()">Reroll</button>
+          </form>
+      </div>
+  </section>
+  <script src="main.js"></script>
+</body>
 </html>
