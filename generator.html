@@ -12,27 +12,27 @@
       <div class="header">
           <h1><a href="index.html">Certificate Generator</a></h1>
       </div>
-      <div id="mySidenav" class="side-nav">
-          <a href="javascript:void(0)" class="close-button" onclick="closeNav()">&times;</a>
+      <div id="mySidenavigation" class="side-navigation">
+          <a href="javascript:void(0)" class="close-button" onclick="closeNavigation()">&times;</a>
           <p class="sidebar-title">Pick A Certificate Background:</p>
-          <button class="template-one" onclick="certificateOne()">Light Theme</button>
-          <button class="template-two" onclick="certificateTwo()">Dark Theme</button>
-          <button class="template-three" onclick="certificateThree()">Gold Theme</button>
-          <button class="template-four" onclick="certificateFour()">Pink Theme</button>
+          <button class="template-one" onclick="updateContainer('light-theme')">Light Theme</button>
+          <button class="template-two" onclick="updateContainer('dark-theme')">Dark Theme</button>
+          <button class="template-three" onclick="updateContainer('gold-theme')">Gold Theme</button>
+          <button class="template-four" onclick="updateContainer('pink-theme')">Pink Theme</button>
       </div>
 
       <div>
-          <span onclick="openNav()">
+          <span onclick="openNavigation()">
               <img class="sidebar-arrow" src="images/vippng.com-north-arrow-png-15215.png" alt="Open">
           </span>
-
-          <div class="white-bar"></div>
-          <div class="cert-background light-theme dark-theme gold-theme pink-theme"></div>
+          
+          <div id="certificate-container"></div>
           <h2 class="title-two">You're Most Likely To</h2>
           <p class="instruction-two">Don't like what you see? Try again!</p>
           <div id="output"></div>
+          <div class="white-bar"></div>
           <form action="generator.html">
-              <button type="reset" class="reset" onclick="getWords()">Reroll</button>
+              <button type="reset" class="button" onclick="getWords()">Reroll</button>
           </form>
       </div>
   </section>
